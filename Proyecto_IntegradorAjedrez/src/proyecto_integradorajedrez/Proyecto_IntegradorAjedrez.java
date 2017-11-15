@@ -5,11 +5,20 @@
  */
 package proyecto_integradorajedrez;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ricky
  */
 public class Proyecto_IntegradorAjedrez {
+    static Scanner sc = new Scanner(System.in);
+    static Peon p = new Peon();
+    static Caballo c = new Caballo();
+    static Alfil a = new Alfil();
+    static Torre t = new Torre();
+    static Reina r = new Reina();
+    static Rey r2 = new Rey();
 
     /**
      * @param args the command line arguments
@@ -19,7 +28,36 @@ public class Proyecto_IntegradorAjedrez {
         String table2[][] = Matriz(imprimematriz(table, 0, 0));
         String Jugador1, Jugador2;
         int x, y, x2, y2;
-        imprimamatriz(table2);
+        
+        boolean win = true;
+        int opn = 0;
+        System.out.println("°°°°°°Ajedrez°°°°°°");
+        do {
+            System.out.println("Elija una Opción: \n"
+                    + "1. Jugar\n"
+                    + "2. Salir\n");
+            opn = sc.nextInt();
+            switch (opn) {
+                case 1:
+                    System.out.println("Jugador 1 Ingrese su nombre(Rebeldes)");
+                    Jugador1 = sc.next();
+                    System.out.println("Jugador 2 Ingrese su nombre(Duques)");
+                    Jugador2 = sc.next();
+                    do {
+                        imprimamatriz(table2);
+                        System.out.println("Su turno Jugador 1(Blancas): " + Jugador1);
+                        
+                        System.out.println("Ingrese X: ");
+                        x = sc.nextInt();
+                        System.out.println("Ingrese Y: ");
+                        y = sc.nextInt();
+                    }while (win == true);
+                    break;
+                case 2:
+                    break;
+            }
+            
+        }while (opn != 2);
 
     }
 
