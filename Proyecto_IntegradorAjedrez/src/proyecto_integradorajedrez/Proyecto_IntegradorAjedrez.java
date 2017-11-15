@@ -1,0 +1,157 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto_integradorajedrez;
+
+/**
+ *
+ * @author ricky
+ */
+public class Proyecto_IntegradorAjedrez {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String table[][] = new String[9][9];
+        String table2[][] = Matriz(imprimematriz(table, 0, 0));
+        String Jugador1, Jugador2;
+        int x, y, x2, y2;
+        imprimamatriz(table2);
+
+    }
+
+    public static String[][] imprimematriz(String matriz[][], int filas, int cols) {
+        if (filas == matriz.length - 1 && cols == matriz.length - 1) {
+            return matriz;
+        } else {
+            if (cols == matriz.length - 1) {
+                return imprimematriz(matriz, filas + 1, 0);
+            } else {
+                return imprimematriz(matriz, filas, cols + 1);
+            }
+        }
+    }
+
+    public static String[][] Matriz(String[][] x) {
+        System.out.println(" ");
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[0].length; j++) {
+                if ((i == 0 && j == 0)) {
+                    x[i][j] = "8";
+                } else if ((i == 1 && j == 0)) {
+                    x[i][j] = "7";
+                } else if ((i == 2 && j == 0)) {
+                    x[i][j] = "6";
+                } else if ((i == 3 && j == 0)) {
+                    x[i][j] = "5";
+                } else if ((i == 4 && j == 0)) {
+                    x[i][j] = "4";
+                } else if ((i == 5 && j == 0)) {
+                    x[i][j] = "3";
+                } else if ((i == 6 && j == 0)) {
+                    x[i][j] = "2";
+                } else if ((i == 7 && j == 0)) {
+                    x[i][j] = "1";
+                } else if ((i == 8 && j == 1)) {
+                    x[i][j] = "a";
+                } else if ((i == 8 && j == 2)) {
+                    x[i][j] = " b";
+                } else if ((i == 8 && j == 3)) {
+                    x[i][j] = " c";
+                } else if ((i == 8 && j == 4)) {
+                    x[i][j] = "d ";
+                } else if ((i == 8 && j == 5)) {
+                    x[i][j] = "e";
+                } else if ((i == 8 && j == 6)) {
+                    x[i][j] = " f";
+                } else if ((i == 8 && j == 7)) {
+                    x[i][j] = " g";
+                } else if ((i == 8 && j == 8)) {
+                    x[i][j] = "h";
+                } else if ((i == 7 && j == 1)) {
+                    x[i][j] = "♖";
+                } else if ((i == 7 && j == 2)) {
+                    x[i][j] = "♘";
+                } else if ((i == 7 && j == 3)) {
+                    x[i][j] = "♗";
+                } else if ((i == 7 && j == 4)) {
+                    x[i][j] = "♕";
+                } else if ((i == 7 && j == 5)) {
+                    x[i][j] = "♔";
+                } else if ((i == 7 && j == 6)) {
+                    x[i][j] = "♗";
+                } else if ((i == 7 && j == 7)) {
+                    x[i][j] = "♘";
+                } else if ((i == 7 && j == 8)) {
+                    x[i][j] = "♖";
+                } else if ((i == 6 && j == 1)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 2)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 3)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 4)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 5)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 5)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 6)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 7)) {
+                    x[i][j] = "♙";
+                } else if ((i == 6 && j == 8)) {
+                    x[i][j] = "♙";
+                } else if ((i == 0 && j == 1)) {
+                    x[i][j] = "♜";
+                } else if ((i == 0 && j == 2)) {
+                    x[i][j] = "♞";
+                } else if ((i == 0 && j == 3)) {
+                    x[i][j] = "♝";
+                } else if ((i == 0 && j == 4)) {
+                    x[i][j] = "♛";
+                } else if ((i == 0 && j == 5)) {
+                    x[i][j] = "♚";
+                } else if ((i == 0 && j == 6)) {
+                    x[i][j] = "♝";
+                } else if ((i == 0 && j == 7)) {
+                    x[i][j] = "♞";
+                } else if ((i == 0 && j == 8)) {
+                    x[i][j] = "♜";
+                } else if ((i == 1 && j == 1)) {
+                    x[i][j] = "♟";
+                } else if ((i == 1 && j == 2)) {
+                    x[i][j] = "♟";
+                } else if ((i == 1 && j == 3)) {
+                    x[i][j] = "♟";
+                } else if ((i == 1 && j == 4)) {
+                    x[i][j] = "♟";
+                } else if ((i == 1 && j == 5)) {
+                    x[i][j] = "♟";
+                } else if ((i == 1 && j == 6)) {
+                    x[i][j] = "♟";
+                } else if ((i == 1 && j == 7)) {
+                    x[i][j] = "♟";
+                } else if ((i == 1 && j == 8)) {
+                    x[i][j] = "♟";
+                } else {
+                    x[i][j] = " ";
+                }
+            }
+        }
+        return x;
+        //█
+    }
+
+    public static void imprimamatriz(String[][] x) {
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[0].length; j++) {
+                System.out.print(" " + x[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+    }
+}
