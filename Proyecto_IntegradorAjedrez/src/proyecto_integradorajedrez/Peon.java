@@ -43,7 +43,7 @@ public class Peon extends Piezas {
             if(direccion) {
                 if (x2 != x && y2 == y) {
                     matriz[x2][y2] = matriz[x][y];
-                    matriz[y][x] = " ";
+                    matriz[x][y] = " ";
                 }   
             }else if (x2 != x && y2 != y) {
                 matriz[x2][y2] = matriz[x][y];

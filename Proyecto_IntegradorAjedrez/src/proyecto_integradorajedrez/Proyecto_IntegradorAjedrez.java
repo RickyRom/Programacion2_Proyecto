@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author ricky
  */
 public class Proyecto_IntegradorAjedrez {
+
     static Scanner sc = new Scanner(System.in);
     static Peon p = new Peon();
     static Caballo c = new Caballo();
@@ -28,7 +29,7 @@ public class Proyecto_IntegradorAjedrez {
         String table2[][] = Matriz(imprimematriz(table, 0, 0));
         String Jugador1, Jugador2;
         int x, y, x2, y2;
-        
+
         boolean win = true;
         int opn = 0;
         System.out.println("°°°°°°Ajedrez°°°°°°");
@@ -39,25 +40,43 @@ public class Proyecto_IntegradorAjedrez {
             opn = sc.nextInt();
             switch (opn) {
                 case 1:
-                    System.out.println("Jugador 1 Ingrese su nombre(Rebeldes)");
+                    System.out.println("Jugador 1 Ingrese su nombre(Blancas)");
                     Jugador1 = sc.next();
-                    System.out.println("Jugador 2 Ingrese su nombre(Duques)");
+                    System.out.println("Jugador 2 Ingrese su nombre(Negras)");
                     Jugador2 = sc.next();
                     do {
                         imprimamatriz(table2);
                         System.out.println("Su turno Jugador 1(Blancas): " + Jugador1);
-                        
+
                         System.out.println("Ingrese X: ");
                         x = sc.nextInt();
                         System.out.println("Ingrese Y: ");
                         y = sc.nextInt();
-                    }while (win == true);
+                        System.out.println(table[x][y]);
+                        if (table[x][y].contains("♙") || table[x][y].contains("♘") || table[x][y].contains("♗") || table[x][y].contains("♖")
+                                || table[x][y].contains("♕") || table[x][y].contains("♔")) {
+                            System.out.println("A donde quiere mover x?");
+                            x2 = sc.nextInt();
+                            System.out.println("A donde quiere mover y?");
+                            y2 = sc.nextInt();
+
+                            table2 = p.movimiento(table2, x, y, x2, y2);
+                            table2 = c.movimiento(table2, x, y, x2, y2);
+                            table2 = a.movimiento(table2, x, y, x2, y2);
+                            table2 = t.movimiento(table2, x, y, x2, y2);
+                            table2 = r.movimiento(table2, x, y, x2, y2);
+                            table2 = r2.movimiento(table2, x, y, x2, y2);
+                        } else {
+                            System.out.println("Está moviendo una pieza que no es de las suyas");
+
+                        }
+                    } while (win == true);
                     break;
                 case 2:
                     break;
             }
-            
-        }while (opn != 2);
+
+        } while (opn != 2);
 
     }
 

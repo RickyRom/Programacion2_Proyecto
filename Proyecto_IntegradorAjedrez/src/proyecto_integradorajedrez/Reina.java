@@ -82,7 +82,7 @@ public class Reina extends Piezas {
                             return matriz;
                         }
                     }
-                }else{
+                } else {
                     System.out.println("Obstruccion en el paso");
                     return matriz;
                 }
@@ -94,10 +94,10 @@ public class Reina extends Piezas {
                             || matriz[x][i].contains("♝") || matriz[x][i].contains("♜") || matriz[x][i].contains("♛") || matriz[x][i].contains("♚")) {
                         centinela = 1;
                     } else {
-                        
+
                     }
                 }
-                
+
                 if (centinela == 0) {
                     if (x2 >= 2 && x2 <= 4 || y2 >= 2 && y2 <= 4) {
                         matriz[x2][y2] = matriz[x][y];
@@ -127,13 +127,16 @@ public class Reina extends Piezas {
                             return matriz;
                         }
                     }
-                }else{
-                    
+                } else {
+                    System.out.println("Obstruccion en el paso");
+                    return matriz;
                 }
+            } else if () {
+                
             }
         } else {
             System.out.println("Se Salió del Rango");
+        }
+        return matriz;
     }
-    return matriz ;
-}
 }
