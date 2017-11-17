@@ -68,11 +68,35 @@ public class Proyecto_IntegradorAjedrez {
                             table2 = r2.movimiento(table2, x, y, x2, y2);
                         } else {
                             System.out.println("Está moviendo una pieza que no es de las suyas");
-
+                        }
+                        imprimamatriz(table2);
+                        System.out.println("Su turno Jugador 2(Duques): " + Jugador2);
+                        System.out.println("Ingrese X: ");
+                        x = sc.nextInt();
+                        System.out.println("Ingrese y: ");
+                        y = sc.nextInt();
+                        
+                        if (table[x][y].contains("♟") || table[x][y].contains("♞") || table[x][y].contains("♝") || table[x][y].contains("♜")
+                                || table[x][y].contains("♛") || table[x][y].contains("♚")) {
+                            System.out.println("A donde quiere mover x?");
+                            x2 = sc.nextInt();
+                            System.out.println("A donde quiere mover y?");
+                            y2 = sc.nextInt();
+                            
+                            table2 = p.movimiento(table2, x, y, x2, y2);
+                            table2 = c.movimiento(table2, x, y, x2, y2);
+                            table2 = a.movimiento(table2, x, y, x2, y2);
+                            table2 = t.movimiento(table2, x, y, x2, y2);
+                            table2 = r.movimiento(table2, x, y, x2, y2);
+                            table2 = r2.movimiento(table2, x, y, x2, y2);
+                        } else {
+                            System.out.println("Esta moviendo una pieza que no es de las suyas");
                         }
                     } while (win == true);
                     break;
                 case 2:
+                    System.out.println("¡GRACIAS POR JUGAR!");
+                    opn = 2;
                     break;
             }
 

@@ -131,7 +131,7 @@ public class Reina extends Piezas {
                     System.out.println("Obstruccion en el paso");
                     return matriz;
                 }
-            } else if () {
+            } else{
                 
             }
         } else {
