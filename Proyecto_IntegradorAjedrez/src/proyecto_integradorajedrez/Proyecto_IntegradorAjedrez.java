@@ -69,7 +69,7 @@ public class Proyecto_IntegradorAjedrez {
                             System.out.println("Está moviendo una pieza que no es de las suyas");
                         }
                         imprimamatriz(table2);
-                        System.out.println("Su turno Jugador 2(Duques): " + Jugador2);
+                        System.out.println("Su turno Jugador 2(Negras): " + Jugador2);
                         System.out.println("Ingrese X: ");
                         x = sc.nextInt();
                         System.out.println("Ingrese y: ");
@@ -121,21 +121,21 @@ public class Proyecto_IntegradorAjedrez {
         for (int i = 0; i < x.length; i++) {
             for (int j = 0; j < x[0].length; j++) {
                 if ((i == 0 && j == 0)) {
-                    x[i][j] = "8";
-                } else if ((i == 1 && j == 0)) {
-                    x[i][j] = "7";
-                } else if ((i == 2 && j == 0)) {
-                    x[i][j] = "6";
-                } else if ((i == 3 && j == 0)) {
-                    x[i][j] = "5";
-                } else if ((i == 4 && j == 0)) {
-                    x[i][j] = "4";
-                } else if ((i == 5 && j == 0)) {
-                    x[i][j] = "3";
-                } else if ((i == 6 && j == 0)) {
-                    x[i][j] = "2";
-                } else if ((i == 7 && j == 0)) {
                     x[i][j] = "1";
+                } else if ((i == 1 && j == 0)) {
+                    x[i][j] = "2";
+                } else if ((i == 2 && j == 0)) {
+                    x[i][j] = "3";
+                } else if ((i == 3 && j == 0)) {
+                    x[i][j] = "4";
+                } else if ((i == 4 && j == 0)) {
+                    x[i][j] = "5";
+                } else if ((i == 5 && j == 0)) {
+                    x[i][j] = "6";
+                } else if ((i == 6 && j == 0)) {
+                    x[i][j] = "7";
+                } else if ((i == 7 && j == 0)) {
+                    x[i][j] = "8";
                 } else if ((i == 8 && j == 1)) {
                     x[i][j] = "a";
                 } else if ((i == 8 && j == 2)) {
@@ -219,7 +219,7 @@ public class Proyecto_IntegradorAjedrez {
                 } else if ((i == 1 && j == 8)) {
                     x[i][j] = "♟";
                 } else {
-                    x[i][j] = " ";
+                    x[i][j] = " " ;
                 }
             }
         }

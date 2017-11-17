@@ -119,7 +119,7 @@ public class Reina extends Piezas {
                             System.out.println("Comiste una pieza");
                         } else if (matriz[x2][y2 - 1].contains("♟") || matriz[x2][y2 - 1].contains("♞") || matriz[x2][y2 - 1].contains("♝")
                                 || matriz[x2][y2 - 1].contains("♜") || matriz[x2][y2 - 1].contains("♛") || matriz[x2][y2 - 1].contains("♚")
-                                && matriz[x2][y2 - 2].contains("♕") || matriz[x2][y2 - 2].contains("♛")) {
+                                && matriz[x2][y2 - 1].contains("♕") || matriz[x2][y2 - 1].contains("♛")) {
                             matriz[x2][y2 - 1] = " ";
                             System.out.println("Comiste una pieza");
                             return matriz;
