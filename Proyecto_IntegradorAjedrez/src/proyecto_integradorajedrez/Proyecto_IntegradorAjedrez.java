@@ -52,7 +52,6 @@ public class Proyecto_IntegradorAjedrez {
                         x = sc.nextInt();
                         System.out.println("Ingrese Y: ");
                         y = sc.nextInt();
-                        System.out.println(table[x][y]);
                         if (table[x][y].contains("♙") || table[x][y].contains("♘") || table[x][y].contains("♗") || table[x][y].contains("♖")
                                 || table[x][y].contains("♕") || table[x][y].contains("♔")) {
                             System.out.println("A donde quiere mover x?");
@@ -75,14 +74,15 @@ public class Proyecto_IntegradorAjedrez {
                         x = sc.nextInt();
                         System.out.println("Ingrese y: ");
                         y = sc.nextInt();
-                        
+                        System.out.println(table[x][y]);
+
                         if (table[x][y].contains("♟") || table[x][y].contains("♞") || table[x][y].contains("♝") || table[x][y].contains("♜")
                                 || table[x][y].contains("♛") || table[x][y].contains("♚")) {
                             System.out.println("A donde quiere mover x?");
                             x2 = sc.nextInt();
                             System.out.println("A donde quiere mover y?");
                             y2 = sc.nextInt();
-                            
+
                             table2 = p.movimiento(table2, x, y, x2, y2);
                             table2 = c.movimiento(table2, x, y, x2, y2);
                             table2 = a.movimiento(table2, x, y, x2, y2);
