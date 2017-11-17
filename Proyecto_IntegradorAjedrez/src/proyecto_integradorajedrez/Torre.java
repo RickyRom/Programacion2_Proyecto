@@ -104,11 +104,32 @@ public class Torre extends Piezas{
                         matriz[x][y] = " ";
                         if (matriz[x2 + 1][y2].contains("♟") || matriz[x2 + 1][y2].contains("♞") || matriz[x2 + 1][y2].contains("♝")
                                 || matriz[x2 + 1][y2].contains("♜") || matriz[x2 + 1][y2].contains("♛") || matriz[x2 + 1][y2].contains("♚")
-                                && matriz[x2 + 2][y2].contains("♕") || matriz[x2 + 2][y2].contains("♛")) {
+                                && matriz[x2 + 2][y2].contains("♖") || matriz[x2 + 2][y2].contains("♜")) {
                             matriz[x2 + 1][y2] = " ";
                             System.out.println("Comiste una pieza");
+                        } else if (matriz[x2 - 1][y2].contains("♟") || matriz[x2 - 1][y2].contains("♞") || matriz[x2 - 1][y2].contains("♝")
+                                || matriz[x2 - 1][y2].contains("♜") || matriz[x2 - 1][y2].contains("♛") || matriz[x2 - 1][y2].contains("♚")
+                                && matriz[x2 - 2][y2].contains("♖") || matriz[x2 - 2][y2].contains("♜")) {
+                            matriz[x2 - 1][y2] = " ";
+                            System.out.println("Comiste una pieza");
+                        } else if (matriz[x2][y2 + 1].contains("♟") || matriz[x2][y2 + 1].contains("♞") || matriz[x2][y2 + 1].contains("♝")
+                                || matriz[x2][y2 + 1].contains("♜") || matriz[x2][y2 + 1].contains("♛") || matriz[x2][y2 + 1].contains("♚")
+                                && matriz[x2][y2 + 2].contains("♖") || matriz[x2][y2 + 2].contains("♜")) {
+                            matriz[x2][y2 + 1] = " ";
+                            System.out.println("Comiste una pieza");
+                        } else if (matriz[x2][y2 - 1].contains("♟") || matriz[x2][y2 - 1].contains("♞") || matriz[x2][y2 - 1].contains("♝")
+                                || matriz[x2][y2 - 1].contains("♜") || matriz[x2][y2 - 1].contains("♛") || matriz[x2][y2 - 1].contains("♚")
+                                && matriz[x2][y2 - 2].contains("♖") || matriz[x2][y2 - 2].contains("♜")) {
+                            matriz[x2][y2 - 1] = " ";
+                            System.out.println("Comiste una pieza");
+                            return matriz;
+                        } else {
+                            return matriz;
                         }
                     }
+                } else {
+                    System.out.println("Obstruccion en el paso");
+                    return matriz;
                 }
             }
         } else {
