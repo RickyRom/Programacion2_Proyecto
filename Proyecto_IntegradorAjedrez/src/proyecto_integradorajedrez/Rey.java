@@ -78,6 +78,34 @@ public class Rey extends Piezas{
                             matriz[x2][y2 - 1] = " ";
                             System.out.println("Comiste una pieza");
                             return matriz;
+                        } else {
+                            return matriz;
+                        }
+                    }
+                } else {
+                    System.out.println("Obstruccion en el paso");
+                    return matriz;
+                }
+            } else if (y == y2 && x != x2) {
+                //V
+                for (int i = x + 1; i < x2; i++) {
+                    if (matriz[x][i].contains("♙") || matriz[x][i].contains("♘") || matriz[x][i].contains("♗") || matriz[x][i].contains("♖")
+                            || matriz[x][i].contains("♕") || matriz[x][i].contains("♔") || matriz[x][i].contains("♟") || matriz[x][i].contains("♞")
+                            || matriz[x][i].contains("♝") || matriz[x][i].contains("♜") || matriz[x][i].contains("♛") || matriz[x][i].contains("♚")) {
+                        centinela = 1;
+                    } else {
+
+                    }
+                }
+                
+                if (centinela == 0) {
+                    if (x2 >= 2 && x2 <= 4 || y2 >= 2 && y2 <= 4) {
+                        matriz[x2][y2] = matriz[x][y];
+                        matriz[x][y] = " ";
+                        if (matriz[x2 + 1][y2].contains("♟") || matriz[x2 + 1][y2].contains("♞") || matriz[x2 + 1][y2].contains("♝")
+                                || matriz[x2 + 1][y2].contains("♜") || matriz[x2 + 1][y2].contains("♛") || matriz[x2 + 1][y2].contains("♚")
+                                && matriz[x2 + 2][y2].contains("") || matriz[x2 + 2][y2].contains("♚")) {
+                            
                         }
                     }
                 }
